@@ -1,0 +1,136 @@
+Git Version -> git --version
+Git Configuration : 
+	1.  $ git config --global user.name "siddharath srivastav" 
+	2.  $ git config --global user.email siddharthsri2003@gmail.com
+	3.	$ git config --global core.editor "code --wait"
+	4.  $ git config --list
+		user.name=siddharath srivastav
+		user.email=siddharthsri2003@gmail.com
+		core.editor=code --wait
+	
+	5. to open git config file : $ git config --global -e
+	6. Intialize the directory which will be used for git
+		a. go to directory
+		b. $ git init
+		USER@DESKTOP-KJ8TQJM MINGW64 /d/git_repo
+		$ git init
+		Initialized empty Git repository in D:/git_repo/.git/
+		
+    7. $ git status
+		On branch master
+
+		No commits yet
+
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+				age.py
+				hello_world.py
+
+		nothing added to commit but untracked files present (use "git add" to track)
+		
+	8. to add the files to git staging area $git add -A/$git add --all
+	9. To commit : 
+	   $ git commit -m "Initial commit"
+	   [master (root-commit) 3328cfd] Initial commit
+		2 files changed, 13 insertions(+)
+		create mode 100644 age.py
+		create mode 100644 hello_world.py
+	10 . git log (do see the log)
+	11. git diff to get difference between a file in local directory and staging area
+	12. git push origin main /git push 
+	13. git pull
+	14. For cloning the remote GIT repo by another user use 
+		a. open git bash in a folder on another user machine
+		b. execute : got clone https://github.com/siddharthsri2003/mygitrepo.git
+	
+	15. Branch and merging 
+		a. git branch dev
+		b. git checkout dev
+		
+	
+	
+Working Directory  ---git add--> Staging ---git commit--> Git Local repo ---git push/pull--> Git remote (main git)	
+
+=============================================================================
+Command to create new git repo on local and initialise it :
+Step 1: Navigate to your project
+cd /path/to/your/project
+Step 2: Initialize a local Git repository
+git init
+Step 3: Add all files
+git add .
+Step 4: Commit the files
+git commit -m "Initial commit"
+Step 5: Create an empty repository on GitHub
+https://github.com/<your-username>/<repository-name>
+Step 6: Add the GitHub repository as the remote
+git remote add origin https://github.com/siddharthsri2003/mypython_repo.git
+Step 7: Rename the default branch to main (if needed)
+git branch -M main
+Step 8: Push the code to GitHub
+git push -u origin main
+
+1. Switch between different Git repositories:
+cd /path/to/repo1
+git remote -v
+git status
+pwd
+
+See all local and remote branches:
+git branch -a
+
+Check which repository you're currently in:
+git rev-parse --show-toplevel
+
+===========================create nrew local rep and push to new git repo================
+1. create a new folder mypythonrepo
+2. open that folder in VS code 
+3. go to that folder in Vs code terminal 
+=>cd mypythonrepo
+=>PS D:\git_tutorial_repo\mypythonrepo
+4.Initialize a local Git repository
+=>$git init
+5.copy the needed files in folder mypythonrepo
+6. add the files to local repo
+=> git add .
+7.commit the files to local repo
+=> git commit -m "commit1"
+[master (root-commit) 534994a] commit1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.py
+8. Create a new repo on github named mypythonrepo
+9.set the remote git repo :
+=>git remote add origin https://github.com/siddharthsri2003/mypythonrepo.git
+10. Verify the remote git repo
+=> git remote -v
+10. Verify the GIT branch (local and remote branches)
+=> git branch -a
+* master
+Step 7: Rename the default branch (master) to (main)[as what ever branch name u decide0
+=>git branch -M main 
+
+=>git branch -M main
+=>git push -u origin main
+
+
+===========================Git branch commands================
+1. to check branch
+=> git branch
+2.  to rename branch 
+=> git branch -M main
+3. to load difference branch 
+=> git checkout <branch name>
+4. To create new branch 
+=> git checkout -b <new branch name>
+5. To delete a branch 
+=> git branch -d <branch name>
+6. push new branch to GIT
+=>git push origin feature1
+7. get difference between two branches
+=> get diff <other branch name>
+8. TO merge two branches .
+=> create PR merge
+9. Merge conflicts
+=> git merge main 
+10 to push other than main 
+=> git push --set-upstream origin feature1
